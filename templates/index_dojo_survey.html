@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dojo Survey</title>
+    <meta name="description" content="A really cool site!">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-left">
+            <div class="col-4">
+                <form action='/result' method='post'>
+                    <div class="form-group">
+                        <div class="p-2 mb-0 bg-dark text-white">
+                            <label for="Your Name:">Your Name</label>
+                        </div>
+                        <input type="text" class="form-control" name="name" placeholder="Type your name here">
+                    </div>
+                    <div class="form-group">
+                        <div class="p-2 mb-0 bg-dark text-white">
+                            <label for="Dojo Location">Dojo Location</label>
+                        </div>
+                        <select multiple class="form-control" name="location" id="" size="6">
+                            <option value="Arlington, VA">Arlington, VA</option>
+                            <option value="Berkeley, CA">Berkeley, CA</option>
+                            <option value="Boise, ID">Boise, ID</option>
+                            <option value="Chicago, IL">Chicago, IL</option>
+                            <option value="Dallas, TX">Dallas, TX</option>
+                            <option value="Los Angeles, CA">Los Angeles, CA</option>
+                            <option value="Orange County, CA">Orange County, CA</option>
+                            <option value="Seattle, WA">Seattle, WA</option>
+                            <option value="Silicon Valley, CA">Silicon Valley, CA</option>
+                            <option value="Tulsa, OK">Tulsa, OK</option>
+                            <option value="Online">Online</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="p-2 mb-0 bg-dark text-white">
+                            <label for="Favorite Language">Favorite Language</label>
+                        </div>
+                        <select multiple class="form-control" name="language" id="" size="3">
+                            <option value=".NET/C#">.NET/C#</option>
+                            <option value="Ruby on Rails">Ruby on Rails</option>
+                            <option value="Python">Python</option>
+                            <option value="MEAN">MEAN</option>
+                            <option value="Java">Java</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="p-2 mb-0 bg-dark text-white">
+                            <label for="Comment (optional):">Comment (optional):</label>
+                        </div>
+                        <input class="form-control" name="comment" type="text" placeholder="Type your comments here">
+                    </div>
+                    <div class="form-group">
+                        <div class="p-2 mb-0 bg-dark text-white">
+                            <label for="">How much experience in programming do you have?</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-inline">
+                            <input type="radio" id="customRadioInline1" name='experience' class="custom-control-input"
+                                value='None'>
+                            <label class="custom-control-label" for="customRadioInline1">None</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-inline">
+                            <input type="radio" id="customRadioInline2" name='experience' class="custom-control-input"
+                                value='Some Experience'>
+                            <label class="custom-control-label" for="customRadioInline2">Dabbled with code</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-inline">
+                            <input type="radio" id="customRadioInline3" name='experience' class="custom-control-input"
+                                value='Built some projects'>
+                            <label class="custom-control-label" for="customRadioInline3">Built some projects</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-inline">
+                            <input type="radio" id="customRadioInline4" name='experience' class="custom-control-input"
+                                value='I know a lot'>
+                            <label class="custom-control-label" for="customRadioInline4">I know a lot</label>
+                        </div>
+                    </div>
+
+
+                    <div form="form-group">
+                        <div class="p-2 mb-0 bg-dark text-white">
+                            <label for="">What are you excited to start learning more about?</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="learn" class="custom-control-input" id="customCheck1"
+                                value="HTML5">
+                            <label class="custom-control-label" for="customCheck1">HTML5</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="learn" class="custom-control-input" id="customCheck2"
+                                value="HTML3">
+                            <label class="custom-control-label" for="customCheck2">CSS3</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="learn" class="custom-control-input" id="customCheck3"
+                                value="JavaScript">
+                            <label class="custom-control-label" for="customCheck3">JavaScript</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="learn" class="custom-control-input" id="customCheck4"
+                                value="MySQL">
+                            <label class="custom-control-label" for="customCheck4">MySQL</label>
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+
+
+
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

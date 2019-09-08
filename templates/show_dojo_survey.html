@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dojo Survey: Show</title>
+    <meta name="description" content="A really cool site!">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-left">
+            <div class="col-4">
+                <!-- <form> -->
+                <table class="table">
+                    <caption>Dojo Survey submitted by {{ name_on_template }}</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="p-2 mb-0 bg-dark text-white">Submitted Info</th>
+                            <th scope="col" class="p-2 mb-0 bg-dark text-white">Dojo Survey</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="col">Name:</th>
+                            <td> {{ name_on_template }}</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="col">Dojo Location:</th>
+                            <td>{{ location_on_template }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Favorite Language: </th>
+                            <td>{{ language_on_template }}</td>
+                            <th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Comment:</th>
+                            <td>{{ comment_on_template }}</td>
+                            <th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Experience:</th>
+                            <td>{{ experience_on_template }}</td>
+                            <th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Wants to Learn:</th>
+                            <td>{{ learn_on_template }}</td>
+                            <th>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" value="Go Back" class="btn btn-primary btn-lg" onclick="history.back()">Go
+                    Back</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
